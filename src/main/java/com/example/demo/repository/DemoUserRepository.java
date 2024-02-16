@@ -1,6 +1,6 @@
 package com.example.demo.repository;
 
-import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -8,8 +8,8 @@ import org.springframework.stereotype.Repository;
 import com.example.demo.model.DemoUser;
 
 @Repository
-public interface DemoUserRepository extends JpaRepository<DemoUser, Long>{
+public interface DemoUserRepository extends JpaRepository<DemoUser, Integer>{
 
-    List<DemoUser> findDemoUserByEmail(String email);
+    Optional<DemoUser> findDemoUserByEmail(String email);
     
 } 
